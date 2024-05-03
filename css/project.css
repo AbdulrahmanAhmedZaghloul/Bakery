@@ -7,8 +7,32 @@
   padding: 0;
 }
 
+html {
+
+  scroll-behavior: smooth;
+}
+
 body {
   color: #8a8a5c;
+}
+
+#btnUp {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: solid 1px rgba(0, 0, 0, 0.7);
+  bottom: 10px;
+  right: 30px;
+  display: none;
+  z-index: 11111;
+  transition: all 0.5s;
+}
+
+#btnUp:hover {
+  background-color: transparent;
+  border: none;
+}
+#btnUp:hover i{
+  color: #8e7754 !important;
+
 }
 
 /* اول سكشن */
@@ -63,8 +87,6 @@ body {
 .dropdown-menu a,
 .dropdown-toggle::after {
   content: none;
-  /* إزالة السهم */
-  ;
 }
 
 .dropdown a {
@@ -79,8 +101,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .navlist li:hover {
@@ -170,9 +191,6 @@ button.bty:hover {
 }
 
 .see h3 {
-  font-size: 25px;
-  margin: 15px 0;
-  font-weight: 500;
   line-height: 1.2;
 }
 
@@ -399,44 +417,18 @@ a i {
   justify-content: center;
 }
 
-.header-about .navlist li {
-  font-size: 17px;
-  padding: 10px;
-  display: inline-block;
-  color: rgb(90, 90, 90);
-}
-
-.header-about .navlist a {
-  text-decoration: none;
-  list-style-type: none;
-  color: rgb(151, 150, 150);
-}
-
-.header-about {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 645747568;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  background-color: rgb(255, 255, 255);
-}
-
 .navlist li {
   font-size: 17px;
   padding: 10px;
   display: inline-block;
-  color: rgb(153, 153, 153);
   position: relative;
-
 }
 
 .navlist a {
   text-decoration: none;
   list-style-type: none;
-  color: rgb(168, 168, 168);
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
 }
 
 .index-home::before {
@@ -479,6 +471,7 @@ a i {
   display: flex;
   align-items: center;
   justify-content: start;
+  /* color: #403f3f; */
 }
 
 
@@ -500,11 +493,11 @@ a i {
   flex-wrap: wrap;
 }
 
-.leader {
-  text-align: center;
-  margin-bottom: 40px;
-  width: 20%;
-  color: #ffffff;
+.laer {
+  /* text-align: center; */
+  /* margin-bottom: 40px; */
+  /* width: 20%; */
+  /* color: #ffffff; */
 }
 
 .leader i {
@@ -603,8 +596,8 @@ a i {
   position: relative;
 }
 
-.see-gallery img{
-height: 60vh;
+.see-gallery img {
+  height: 60vh;
 }
 
 .gallery-position {
@@ -834,6 +827,35 @@ height: 60vh;
   color: #938f7d;
 }
 
+
+/* ////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.dasw {
+  width: 90%;
+  margin: auto;
+  text-align: right;
+}
+
+.aswe {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.dasw {
+  width: 90%;
+  margin: auto;
+  text-align: right;
+  display: none;
+  border-bottom: 1px solid silver;
+  /* يكون مخفيًا ابتدائيًا */
+}
+
+
 /* ////////////////////////@media////////////////////// */
 /* ////////////////////////@media////////////////////// */
 /* ////////////////////////@media////////////////////// */
@@ -894,11 +916,6 @@ height: 60vh;
     top: 100%;
   }
 
-  .header {
-    background-color: rgb(255, 255, 255);
-  }
-
-
   .navlist li {
     border-bottom: 1px silver solid;
   }
@@ -940,46 +957,6 @@ height: 60vh;
 /* ////////////////////////@media////////////////////// */
 /* ////////////////////////@media////////////////////// */
 /* ////////////////////////@media////////////////////// */
-
-/* ////////////////////////////////////////////////////////////////////////////////////// */
-/* ////////////////////////////////////////////////////////////////////////////////////// */
-
-
-/* 
-.plus::before {
-  content: "^"!important;
-  font-size: 25px;
-  display: inline-block;
-} */
-
-/* .minus::before {
-  content: "^"!important;
-  font-size: 45px;
-  display: inline-block;
-} */
-
-.dasw {
-  width: 90%;
-  margin: auto;
-  text-align: right;
-}
-
-.aswe {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
-}
-
-.dasw {
-  width: 90%;
-  margin: auto;
-  text-align: right;
-  display: none;
-  border-bottom: 1px solid silver;
-  /* يكون مخفيًا ابتدائيًا */
-}
 
 
 /* ////////////////////////////////////////////////////////////////////////////////////// */
