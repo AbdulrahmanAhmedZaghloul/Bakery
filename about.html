@@ -19,88 +19,135 @@
 </head>
 
 <body>
-   
 
-    <header id="main-nav" class="header fixed-top p-0 container-fluid">
+	<section id="loading" class=" justify-content-center align-items-center">
+		<div class="spinner">
+            <i class="fa-solid fa-spinner fa-spin fa-spin-reverse"></i>
+		</div>
+	</section>
+	
+	<button id = "btnUp" class="p-1 px-3 py-2 position-fixed  rounded-circle">
+		<i class="fas fa-arrow-alt-circle-up "></i>
+        <i class="text-white fa-solid fa-arrow-right fa-rotate-270"></i>
 
-        <div class="logo">
-            <a href="index.html">
-                <img style="width: 150px;" src="images/bakery-color.png" alt="">
-            </a>
+	</button>
+	
+	<div id="sideBar">
+		<div id="colorBox">
+			<h4 class="pb-3">Choose Your Color : </h4>
+			<div class="color-item">
+			</div>
+			
+			<div class="color-item">
+			</div>
+			
+			<div class="color-item">
+			</div>
+			
+			<div class="color-item">
+			</div>
+			
+			<div class="color-item">
+			</div>
+		</div>
+		<i id="sideBarToggle" class=" fa fa-cog py-2 fa-spin"></i>
+	</div>
+
+      <nav id="main-nav" class="navbar navbar-expand-lg  header ">
+        <div class="container-fluid">
+            <div class="logo">
+                <a href="index.html">
+                    <img style="width: 150px;" src="images/bakery-color.png" alt="">
+                </a>
+            </div>         
+             <button class="navbar-toggler" 
+             type="button" 
+             data-bs-toggle="collapse" 
+             data-bs-target="#navbarText" aria-controls="navbarText" 
+             aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navlist navbar-nav ms-auto">
+               
+                <li><a href="index.html">Home</a></li>
+
+                <li><a class="index-home" href="about.html">About</a></li>
+
+                <li><a href="Our-offer.html">OurOffer</a></li>
+
+                <li class="Gallery-nav">
+                    <a href="Gallery.html">Gallery</a>
+
+                </li>
+                <li class="simpel-blog">
+                    <a href="Blog.html">Blog</a>
+                    <ul class="simpel-menu">
+                        <a href="Blog.html" class="dropdown-item">
+                            <span> Blog</span>
+                        </a>
+    
+                        <a href="Simple-Post.html" class="dropdown-item">
+                            <span>></span>
+                            <span>Simple Post</span>
+                        </a>
+    
+                        <a href="Gallery-Post.html" class="dropdown-item">
+                            <span>></span>
+                            <span>Gallery Post</span>
+                        </a>
+    
+                        <a href="Basic-Post.html" class="dropdown-item">
+                            <span>></span>
+                            <span>Basic Post</span>
+                        </a>
+                    </ul>
+                </li>
+
+                <li onclick="toggleVisibility()"
+                    class=" d-block align-content-center justify-content-center d-md-none d-xl-none">
+
+                    <div class="p-3 d-flex align-content-center justify-content-between m-auto text-center">
+                        <span>Blog</span>
+                        <span id="toggleIcon">^</span>
+                    </div>
+
+                    <div class="dasw">
+                        <a href="Blog.html" class="text-start">
+                            <span> Blog</span>
+                        </a>
+
+                        <a href="Simple-Post.html" class="text-start">
+                            <span>></span>
+                            <span>Simple Post</span>
+                        </a>
+
+                        <a href="Gallery-Post.html" class="text-start">
+                            <span>></span>
+                            <span>Gallery Post</span>
+                        </a>
+
+                        <a href="Basic-Post.html" class="text-start">
+                            <span>></span>
+                            <span>Basic Post</span>
+                        </a>
+
+                        </a>
+
+                    </div>
+                </li>
+
+                <li><a href="contect.html">Contect</a></li>
+             
+                <li><a href="login.html">LogIn</a></li>
+
+            </ul>
+        
+          </div>
         </div>
-        <ul class="navlist">
-            <li><a class="index-home" href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="Our-offer.html">OurOffer</a></li>
-            <li><a href="Gallery.html">Gallery</a></li>
-
-            <li class="simpel-blog">
-                <a href="Blog.html">Blog</a>
-                <ul class="simpel-menu">
-
-                    <a href="Blog.html" class="dropdown-item">
-                        <span> Blog</span>
-                    </a>
-
-                    <a href="Simple-Post.html" class="dropdown-item">
-                        <span>></span>
-                        <span>Simple Post</span>
-                    </a>
-
-                    <a href="Gallery-Post.html" class="dropdown-item">
-                        <span>></span>
-                        <span>Gallery Post</span>
-                    </a>
-
-                    <a href="Basic-Post.html" class="dropdown-item">
-                        <span>></span>
-                        <span>Basic Post</span>
-                    </a>
+      </nav>
 
 
-                </ul>
-            </li>
-
-            <li onclick="toggleVisibility()"
-                class=" d-block align-content-center justify-content-center d-md-none d-xl-none">
-
-                <div class="p-3 d-flex align-content-center justify-content-between m-auto text-center">
-                    <span>Blog</span>
-                    <span id="toggleIcon">^</span>
-                </div>
-
-                <div class="dasw">
-                    <a href="Blog.html" class="text-start">
-                        <span> Blog</span>
-                    </a>
-
-                    <a href="Simple-Post.html" class="text-start">
-                        <span>></span>
-                        <span>Simple Post</span>
-                    </a>
-
-                    <a href="Gallery-Post.html" class="text-start">
-                        <span>></span>
-                        <span>Gallery Post</span>
-                    </a>
-
-                    <a href="Basic-Post.html" class="text-start">
-                        <span>></span>
-                        <span>Basic Post</span>
-                    </a>
-
-                    </a>
-
-                </div>
-            </li>
-
-            <li><a href="contect.html">Contect</a></li>
-            <li><a href="login.html">LogIn</a></li>
-
-        </ul>
-
-        <i id="menu-icon" class="fas fa-bars"></i>
-    </header> 
     <main>
         
         <button id="btnUp" class="p-3 position-fixed  rounded-5">
@@ -394,9 +441,8 @@
             </div>
         </div>
     </footer>
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/index-1.js"></script>
 
 </html>

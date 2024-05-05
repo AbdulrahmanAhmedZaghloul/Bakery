@@ -7,13 +7,96 @@
   padding: 0;
 }
 
-html {
 
+html {
   scroll-behavior: smooth;
 }
 
 body {
   color: #8a8a5c;
+  overflow: hidden;
+}
+
+#btnUp {
+  background-color: #8e7754;
+  color: #fff;
+  font-size: 30px;
+  border-radius: 100px;
+  padding: 10px;
+  border: solid 1px #8e7754;
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+  display: none;
+
+}
+
+#main-nav {
+  transition: all 1s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+#sideBar {
+  position: fixed;
+  top: 50%;
+  left: 0px;
+  color: #fff;
+  z-index: 10;
+}
+
+#colorBox {
+  background-color: #8e7754;
+  padding: 20px;
+  float: left;
+}
+
+.color-item {
+  background-color: #f00;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#sideBarToggle {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 50px;
+  float: left;
+  color: #8e7754;
+}
+#loading{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(142, 119, 84,1);
+	z-index: 10000;
+	display:flex
+}
+/*---------------------------------------*/
+.spinner {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+  -webkit-animation: sk-rotate 2.0s infinite linear;
+  animation: sk-rotate 2.0s infinite linear;
+}
+.spinner i {
+  width: 80%;
+  height: 80%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  font-size:500%;
+  color:#fff
 }
 
 #btnUp {
@@ -30,8 +113,9 @@ body {
   background-color: transparent;
   border: none;
 }
-#btnUp:hover i{
-  color: #8e7754 !important;
+
+#btnUp:hover i {
+  color: #0e0d0b !important;
 
 }
 
@@ -39,19 +123,21 @@ body {
 /*navbar*/
 
 .simpel-blog {
-  position: relative;
+  /* position: relative; */
   transition: all 1s;
+  z-index: 1723892738192738912789;
 }
 
 .simpel-menu {
   position: absolute;
-  left: -15px;
-  top: 45px;
+  right: 10%;
+  top: 40px;
   background-color: #8e7754;
   display: none;
   padding: 0;
   margin: auto;
   padding: 10px;
+  z-index: 8172387283891273728;
 }
 
 .simpel-menu a {
@@ -66,9 +152,9 @@ body {
 .simpel-blog:hover .simpel-menu {
   display: block;
   background-color: #454444;
+  z-index: 15627356712;
 }
 
-/* ////////////////////////////// Home page ////////////////////////////////////    */
 
 .dropdown-menu {
   color: #000;
@@ -101,16 +187,18 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.2);
 }
 
-.navlist li:hover {
+.navlist .simpel-blog:hover {
   color: rgb(170, 158, 91);
 }
 
 .fas {
   display: none;
 }
+
+
+/* ////////////////////////////// Home page ////////////////////////////////////    */
 
 /* background اول سكشن */
 .home {
@@ -275,7 +363,7 @@ a i {
   right: 0;
   bottom: 0;
   background-color: black;
-  z-index: 890723923078942973488;
+  z-index: 89072392307894297423434433488;
 }
 
 #side {
@@ -347,10 +435,11 @@ a i {
 
 #sideBar {
   position: fixed;
-  top: 4.4rem;
+  top: 6.4rem;
   right: -100%;
   color: #fff;
   z-index: 10;
+  width: 28%;
 }
 
 #colorBox {
@@ -872,23 +961,6 @@ a i {
     transform: rotate(-180deg);
   }
 
-  .navlist {
-    display: flex;
-    position: absolute;
-    top: -1000px;
-    right: 0;
-    left: 0;
-    flex-direction: column;
-    background-color: rgb(255, 255, 255);
-    text-align: left;
-    padding: 0 5%;
-    transition: all 0.45s ease;
-    z-index: 544645645654654;
-    height: 100vh;
-    overflow-y: scroll;
-
-  }
-
   .navlist::-webkit-scrollbar {
     height: 20px;
     width: 0.5rem;
@@ -910,10 +982,23 @@ a i {
     align-items: center;
     justify-content: center;
     text-align: start;
+    color: #000 !important;
+
   }
 
-  .navlist.open {
-    top: 100%;
+  .navlist {
+    background-color: #fff !important;
+    color: #000 !important;
+  }
+
+  #main-nav {
+    background-color: #fff !important;
+    transition: all 1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1263752631276;
   }
 
   .navlist li {
@@ -942,7 +1027,6 @@ a i {
     background-color: transparent;
     display: none;
   }
-
 
   .blog-show {
     display: block;
@@ -1462,3 +1546,5 @@ a i {
 .banter-loader__box:nth-child(9) {
   animation: moveBox-9 4s infinite;
 }
+
+
